@@ -1,0 +1,18 @@
+{
+  "name": "Facebook auto like",
+  "version": "1.0",
+  "description": "Facebook User auto like",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "click me!"
+  },
+  "permissions": [
+    "activeTab","https://www.facebook.com/"
+  ],
+  "content_scripts": [{
+    "matches": ["https://www.facebook.com/*","http://www.facebook.com/*"],
+    "js": ["fbauto.js"]
+  }]
+}
